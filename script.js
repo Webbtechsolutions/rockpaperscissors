@@ -1,35 +1,42 @@
 // Javascript for rock paper scissors game
 
-// let choice = ["rock", "paper", "scissors"]
 
-function computerPlay() {
-    let choice = ["rock", "paper", "scissors"]
-    return randomChoice = choice[Math.floor(Math.random() * choice.length)];
-}
+// your JavaScript file
+const container = document.querySelector("#container");
 
-function playerSelection() {
-        return prompt("Choose rock, paper or scissors?")
-    } 
+const content = document.createElement("div");
+content.classList.add("content");
+content.textContent = "This is the glorious text-content!";
 
-function playRound(playerSelection, computerPlay) {
-        console.log(`Commputer chose ${computerPlay}`);
-    if (computerPlay === "rock" && playerSelection === "scissors"){
-        return "Computer chose rock so computer wins!";
-    } else if (computerPlay === "paper" && playerSelection === "rock"){
-        return "Computer chose paper so computer wins!";
-    } else if (computerPlay === "scissors" && playerSelection === "paper"){
-        return "Computer chose scissors so computer wins!";
-    } else if (playerSelection === "rock" && computerPlay === "scissors"){
-        return "You win! Computer chose scissors";
-    } else if (playerSelection === "paper" && computerPlay === "rock"){
-        return "You win! Computer chose rock";
-    } else if (playerSelection === "scissors" && computerPlay === "paper"){
-        return "You win! Computer chose paper";
-    } else {
-        return "It's a draw";
-    }
-    }
-    
-const getComputerChoce = computerPlay();
-console.log(playRound(playerSelection(), computerPlay()));
+container.appendChild(content);
+
+const para = document.createElement("p");
+para.classList.add("p");
+para.textContent = "Hey I'm Red"
+para.style.color = "red"
+
+container.appendChild(para);
+
+const headerThree = document.createElement("h3");
+headerThree.classList.add("h3");
+headerThree.textContent = "I'm a blue h3"
+headerThree.style.color = "blue"
+
+container.appendChild(headerThree);
+
+const box = document.createElement("div");
+box.classList.add("div");
+box.style.backgroundColor = "pink"
+box.style.borderColor = "black"
+const headerOne = document.createElement("h1");
+headerOne.classList.add("h1");
+headerOne.textContent = "I'm a div"
+const paragraph = document.createElement("p");
+paragraph.classList.add("p");
+paragraph.textContent = "ME TOO!"
+box.appendChild(headerOne,);
+box.appendChild(paragraph);
+
+container.appendChild(box, headerOne, paragraph);
+
 
